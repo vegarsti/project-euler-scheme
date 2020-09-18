@@ -45,7 +45,9 @@
   (if (zero? (- n 1))
       '()
       (cons (- n 1) (ints-up-to (- n 1)))))
-(sum (filter multiple-of-3-or-5? (ints-up-to 1000)))
+
+(display "Euler 1: ")
+(display (sum (filter multiple-of-3-or-5? (ints-up-to 1000))))
 
 
 ;; 2: Find the sum of the even-valued Fibonacci terms below four million
@@ -56,5 +58,6 @@
           items
           (cons next (fib-iter next prev items)))))
   (fib-iter 0 1 '()))
-(sum (filter even? (fibs-up-to 4000000)))
 
+(display "Euler 2: ")
+(display (sum (filter even? (fibs-up-to 4000000))))
